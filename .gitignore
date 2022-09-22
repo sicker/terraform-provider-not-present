@@ -1,0 +1,5 @@
+main/terraform.tfstate*
+main/.bin/
+main/.terraform/
+main/lambda_function_payload.zip
+main/plan

@@ -1,0 +1,17 @@
+## Install SSH  
+mkdir -p $HOME/.ssh
+chmod 0700 $HOME/.ssh
+
+ssh-keygen -t rsa -b 4096 -c "sicker27@hotmail.com"
+
+## Install AWS CLI
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+
+## Install TFSwitch
+wget https://raw.githubusercontent.com/warrensbox/terraform-switcher/release/install.sh 
+chmod 755 install.sh
+./install.sh -b .bin
+
+## Package Code
+zip lambda_function_payload.zip index.js 
